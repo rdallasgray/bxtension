@@ -19,7 +19,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>bxtension@pausebuttonedit.com</em:id>
-		<em:version>1.1</em:version>
+		<em:version>1.0.1.r5</em:version>
 		<em:type>2</em:type>
 
 		<!-- Target Application this extension can install into, 
@@ -32,7 +32,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 			</Description>
 		</em:targetApplication>
 		
-		<em:updateUrl>http://bxtension.googlecode.com/files/update.rdf</em:updateUrl>
+		<em:updateUrl>http://www.pausebuttonedit.com/bxtension/update.rdf</em:updateUrl>
 		
 		<em:updateKey>
 			MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC4xQquFt6Z9RbmUA

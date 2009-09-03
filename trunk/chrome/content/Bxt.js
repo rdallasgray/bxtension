@@ -15,12 +15,12 @@ You should have received a copy of the GNU General Public License along with Bxt
 
 Bxt = {
 	
-	version: "1.1",
+	version: "1.0.1",
 	
 	boot: function() {
 		window.addEventListener("DOMContentLoaded",function(e) {
 			if (e.target instanceof XULDocument && e.target.documentElement.id === "bxs-window-main") {
-				e.target.documentElement.setAttribute("bxtension-version",Bxt.version);
+				e.target.documentElement.setAttribute("bxt-version",Bxt.version);
 			}
 		},false,true);
 		document.addEventListener("ServiceRequest", function(e) { return Bxt.Services.handleRequest(e); }, false, true);
