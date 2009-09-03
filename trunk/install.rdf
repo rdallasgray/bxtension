@@ -31,11 +31,20 @@ You should have received a copy of the GNU General Public License along with Bxt
 				<em:maxVersion>3.5.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
+		
+		<em:updateUrl>http://bxtension.googlecode.com/files/update.rdf</em:updateUrl>
+		
+		<em:updateKey>
+			MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC4xQquFt6Z9RbmUA
+			fx8DhmdpUzyvLLklBVnlm03cWq2mprYKIEVbv8pOojB1BxFz9ItKZ6
+			Nua1KvTXTSU3+R+tJMxnNDD7ntWitSdBA13TzNtDODWNVwwD15y4VV
+			trOvgfbpzIHgXDVJGSJufjpxRFobAzlD/BAvABf03VgHSwNQIDAQAB
+		</em:updateKey>
 
 		<!-- Front End MetaData -->
 		<em:name>Bxtension</em:name>
-		<em:description>Bxs Extension</em:description>
+		<em:description>A small extension which helps Boxes do its work.</em:description>
 		<em:creator>Robert Johnston</em:creator>
-		<em:homepageURL>http://www.pausebuttonedit.com/</em:homepageURL>
+		<em:homepageURL>http://bxtension.googlecode.com/</em:homepageURL>
 	</Description>      
 </RDF>
