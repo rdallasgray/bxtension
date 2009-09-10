@@ -31,19 +31,19 @@ Bxt.Services = {
 		
 			if (req.tries > 3) {
 				req.xhr.removeEventListener("load", knock, false, true);
-				Components.utils.reportError("knocked three times, running callback anyway");
+				Components.utils.reportError(req.options.url+": knocked three times, running callback anyway");
 				req.callback();
 				return;
 			}
 			if (req.xhr.status === 401) {
-				Components.utils.reportError("knocked and got 401, trying again");
+				Components.utils.reportError(req.options.url+": knocked and got 401, trying again");
 				req.xhr.removeEventListener("load", knock, false, true);
 				req.xhr.abort();
 				req.setup();
 				req.send();
 			}
 			else {
-				Components.utils.reportError("knocked and status was "+req.xhr.status+", running callback");
+				Components.utils.reportError(req.options.url+": knocked and status was "+req.xhr.status+", running callback");
 				req.xhr.removeEventListener("load", knock, false, true);
 				Components.utils.reportError(req.xhr.responseText);
 				req.callback();
