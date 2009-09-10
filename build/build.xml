@@ -1,0 +1,77 @@
+<?xml version="1.0" ?> 
+<project name="bxtension" default="buildAndCommit" basedir="/Users/robertjohnston/Documents/Jobs/Active/1011_Bxs_Extension/"> 
+
+<!-- Project directories --> 
+<property name="src_dir" location="src"/> 
+<property name="build_dir" location="build"/> 
+<property name="dist_dir" location="dist"/> 
+<property name="tools_dir" location="tools"/> 
+<property name="update_dir" value="http://bxtension.googlecode.com/svn/dist"/> 
+
+
+<!-- Targets --> 
+
+<target name="createDistributionXPI"> 
+   	<xmlproperty file="${src_dir}/install.rdf" keepRoot="false"/>
+	<property name="buildVersion" value="${Description.em:version}"/>
+	<property name="outputXPIName" value="${ant.project.name}-${buildVersion}.xpi"/>
+	<zip destfile="${dist_dir}/${outputXPIName}" basedir="${src_dir}" update="true"/>
+	<echo>Created ${dist_dir}/${outputXPIName}</echo>
+	<copy file="${dist_dir}/${outputXPIName}" tofile="${dist_dir}/current/bxtension.xpi"/>
+	<echo>Copied ${dist_dir}/${outputXPIName} to ${dist_dir}/current/bxtension.xpi</echo>
+</target> 
+
+<target name="createUpdateRDF" depends="createDistributionXPI">
+	<exec executable="${tools_dir}/mxtools/uhura" dir="${dist_dir}" failonerror="true">
+		<arg value="-o"/>
+		<arg value="update.rdf"/>
+		<arg value="-k"/>
+		<arg value="${tools_dir}/bxtension.pem"/>
+		<arg value="${dist_dir}/${outputXPIName}"/>
+		<arg value="${update_dir}/${outputXPIName}"/> 
+	</exec>
+	<echo>Created ${dist_dir}/update.rdf</echo>
+</target>
+
+<target name="buildAndCommit" depends="createUpdateRDF">
+	<exec executable="svn" dir="${dist_dir}" failonerror="true">
+		<arg value="propset"/>
+		<arg value="svn:mime-type"/>
+		<arg value="text/xml"/>
+		<arg value="update.rdf"/>
+	</exec>
+	<exec executable="svn" dir="${dist_dir}/current" failonerror="true">
+		<arg value="propset"/>
+		<arg value="svn:mime-type"/>
+		<arg value="application/x-xpinstall"/>
+		<arg value="bxtension.xpi"/>
+	</exec>
+	<exec executable="svn" dir="${dist_dir}" failonerror="true">
+		<arg value="add"/>
+		<arg value="${outputXPIName}"/>
+	</exec>
+	<exec executable="svn" dir="${src_dir}" failonerror="true">
+		<arg value="commit"/>
+		<arg value="-m"/>
+		<arg value="Committed full src dir, build ${buildVersion}"/>
+		<arg value="${src_dir}"/>
+	</exec>
+	<exec executable="svn" dir="${dist_dir}" failonerror="true">
+		<arg value="commit"/>
+		<arg value="-m"/>
+		<arg value="Committed revision ${buildVersion}: ${outputXPIName}, update.rdf"/>
+	</exec>
+	<exec executable="svn" dir="${dist_dir}" failonerror="true">
+		<arg value="commit"/>
+		<arg value="-m"/>
+		<arg value="Committed revision ${buildVersion}: ${outputXPIName}, update.rdf"/>
+	</exec>
+	<exec executable="svn" dir="${dist_dir}/current" failonerror="true">
+		<arg value="commit"/>
+		<arg value="-m"/>
+		<arg value="Committed current dist, revision ${buildVersion}"/>
+	</exec>
+	<echo>Done</echo>
+</target>
+
+</project>
