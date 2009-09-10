@@ -21,7 +21,7 @@
     <em:description>A small extension that helps Boxes do its work.</em:description>
     <em:creator>Robert Johnston</em:creator>
     <em:homepageURL>http://bxtension.googlecode.com/</em:homepageURL>
-    <em:updateURL>http://www.pausebuttonedit.com/bxtension/update.rdf</em:updateURL>
+    <em:updateURL>http://bxtension.googlecode.com/svn/build/update.rdf</em:updateURL>
     <em:updateKey>
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCo1gi42L2Clq7kdSazovfeKQjr
 wAwAg4pmv0wEH758VZ/kOXvrA2amtBWsBHY3J4sKGwJ1pOWHXclmVy/DM/JPnKsr
