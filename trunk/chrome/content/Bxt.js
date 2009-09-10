@@ -24,7 +24,9 @@ Bxt = {
 			}
 		},false,true);
 		document.addEventListener("ServiceRequest", function(e) { return Bxt.Services.handleRequest(e); }, false, true);
-	}
+	},
+	
+	console: Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService)
 
 };
 
