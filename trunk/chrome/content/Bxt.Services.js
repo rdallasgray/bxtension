@@ -29,9 +29,9 @@ Bxt.Services = {
 		var knock = function() {
 			req.tries++;
 		
-			if (req.tries > 3) {
+			if (req.tries > 4) {
 				req.xhr.removeEventListener("load", knock, false, true);
-				Bxt.console.logStringMessage(req.options.url+": knocked three times, running callback anyway");
+				Bxt.console.logStringMessage(req.options.url+": knocked four times, running callback anyway");
 				req.callback();
 				return;
 			}
