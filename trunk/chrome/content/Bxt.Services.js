@@ -25,7 +25,7 @@ Bxt.Services = {
 	},
 		
 	createRequest: function(options) {
-				
+		Bxt.console.logStringMessage(req.options.url+": creating request");
 		var knock = function() {
 			req.tries++;
 		
@@ -114,7 +114,7 @@ Bxt.Services = {
 	public: {
 
 		authenticatedRequest: function(requester) {
-			Bxt.console.logStringMessage("received serviceRequest "+requester.serviceRequest.toSource());
+
 			var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 
 			req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
