@@ -25,7 +25,7 @@ Bxt.Services = {
 	},
 		
 	createRequest: function(options) {
-		Bxt.console.logStringMessage(req.options.url+": creating request");
+		Bxt.console.logStringMessage(options.url+": creating request");
 		var knock = function() {
 			req.tries++;
 		
