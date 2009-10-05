@@ -89,12 +89,10 @@ Bxt.Services = {
 			},
 			
 			send: function(data) {
-				Bxt.console.logStringMessage("trying to send request "+req.options.url);
 				var data = data || req.data;
 				req.setup();
 				req.xhr.open(req.options.method,req.options.url,true,req.options.username,req.options.password);
 				req.setHeaders();
-				Bxt.console.logStringMessage("sending request "+req.options.url);
 				var sendFunc = (req.binary === true) ? "sendAsBinary" : "send";
 				req.xhr[sendFunc](data);
 			},
