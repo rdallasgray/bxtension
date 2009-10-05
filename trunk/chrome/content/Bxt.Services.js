@@ -118,6 +118,12 @@ Bxt.Services = {
 			var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 
 			req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
+			
+			if (requester.serviceRequest.options.headers !== undefined) {
+				for (var h in headers) {
+					req.addHeader(h,headers[h]);
+				}
+			}
 
 			req.callback = 	function() {
 				requester.response = { 
