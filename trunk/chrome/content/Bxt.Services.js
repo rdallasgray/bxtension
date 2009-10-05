@@ -120,8 +120,8 @@ Bxt.Services = {
 			req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
 			
 			if (requester.serviceRequest.options.headers !== undefined) {
-				for (var h in headers) {
-					req.addHeader(h,headers[h]);
+				for (var h in requester.serviceRequest.options.headers) {
+					req.addHeader(h,requester.serviceRequest.options.headers[h]);
 				}
 			}
 
