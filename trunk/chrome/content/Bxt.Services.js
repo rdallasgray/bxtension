@@ -25,7 +25,7 @@ Bxt.Services = {
 	},
 		
 	createRequest: function(options) {
-		Bxt.console.logStringMessage(options.url+": creating request");
+
 		var knock = function() {
 			req.tries++;
 		
@@ -102,12 +102,11 @@ Bxt.Services = {
 			},
 			
 			tries: 0
-			
 		}
 		
 		req.xhr.withCredentials = true;
 		req.xhr.mozBackgroundRequest = true;
-		
+		Bxt.console.logStringMessage("created request "+req.options.url);
 		return req;
 	},
 
