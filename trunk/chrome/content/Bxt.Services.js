@@ -150,6 +150,11 @@ Bxt.Services = {
 
 				Bxt.Controller.Uploads.addUpload(req,file);
 			}
+		},
+		
+		clearHttpAuth: function(requester) {
+			var auth = Components.classes["@mozilla.org/network/http-auth-manager;1"].getService(Components.interfaces.nsIHttpAuthManager);
+			auth.clearAll();
 		}
 	}
 
