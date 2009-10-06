@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 Bxt.Services = {
 
 	handleRequest: function(e) {
+		Bxt.console.logStringMessage("serviceRequest: "+e.target.wrappedJSObject.serviceRequest.toSource());
 		Bxt.Services.public[e.target.wrappedJSObject.serviceRequest.service](e.target.wrappedJSObject);
 	},
 
