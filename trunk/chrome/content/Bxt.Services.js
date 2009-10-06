@@ -145,6 +145,8 @@ Bxt.Services = {
 
 				var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 				req.binary = true;
+				
+				Bxt.console.logStringMessage(req.options.toSource());
 
 				req.callback = 	function() {
 					requester.response = { 
