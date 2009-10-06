@@ -15,7 +15,6 @@ You should have received a copy of the GNU General Public License along with Bxt
 Bxt.Services = {
 
 	handleRequest: function(e) {
-		Bxt.console.logStringMessage("serviceRequest: "+e.target.wrappedJSObject.serviceRequest.toSource());
 		Bxt.Services.public[e.target.wrappedJSObject.serviceRequest.service](e.target.wrappedJSObject);
 	},
 
@@ -32,19 +31,19 @@ Bxt.Services = {
 		
 			if (req.tries > 4) {
 				req.xhr.removeEventListener("load", knock, false, true);
-				Bxt.console.logStringMessage(req.options.url+": knocked four times, running callback anyway");
+				Bxt.console.logStringMessage(req.options.url+": tried four times, running callback");
 				req.callback();
 				return;
 			}
 			if (req.xhr.status === 401) {
-				Bxt.console.logStringMessage(req.options.url+": knocked and got 401, trying again");
+				Bxt.console.logStringMessage(req.options.url+": 401");
 				req.xhr.removeEventListener("load", knock, false, true);
 				req.xhr.abort();
 				req.setup();
 				req.send();
 			}
 			else {
-				Bxt.console.logStringMessage(req.options.url+": knocked and status was "+req.xhr.status+", running callback");
+				Bxt.console.logStringMessage(req.options.url+": "+req.xhr.status+", running callback");
 				req.xhr.removeEventListener("load", knock, false, true);
 				Bxt.console.logStringMessage(req.xhr.responseText);
 				req.callback();
@@ -71,6 +70,7 @@ Bxt.Services = {
 			
 			setHeaders: function() {
 				for (var i in req.headers) {
+					Bxt.console.logStringMessage("setting header "+i+": "+req.headers[i]);
 					req.xhr.setRequestHeader(i,req.headers[i]);
 				}
 			},
@@ -94,7 +94,7 @@ Bxt.Services = {
 				req.setup();
 				req.xhr.open(req.options.method,req.options.url,true,req.options.username,req.options.password);
 				req.setHeaders();
-				var sendFunc = (req.binary === true) ? "sendAsBinary" : "send";
+				var sendFunc = req.binary ? "sendAsBinary" : "send";
 				req.xhr[sendFunc](data);
 			},
 			
@@ -145,8 +145,6 @@ Bxt.Services = {
 
 				var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 				req.binary = true;
-				
-				Bxt.console.logStringMessage(req.options.toSource());
 
 				req.callback = 	function() {
 					requester.response = { 
