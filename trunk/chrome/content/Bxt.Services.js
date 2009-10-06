@@ -59,6 +59,14 @@ Bxt.Services = {
 			headers: {},
 			handlers: [],
 			
+			init: function() {
+				if (options.headers !== undefined) {
+					for (var h in options.headers) {
+						req.addHeader(h,options.headers[h]);
+					}
+				}
+			},
+			
 			addHeader: function(name,value) {
 				req.headers[name] = value;
 			},
@@ -118,12 +126,6 @@ Bxt.Services = {
 			var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 
 			req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
-			
-			if (requester.serviceRequest.options.headers !== undefined) {
-				for (var h in requester.serviceRequest.options.headers) {
-					req.addHeader(h,requester.serviceRequest.options.headers[h]);
-				}
-			}
 
 			req.callback = 	function() {
 				requester.response = { 
@@ -133,6 +135,7 @@ Bxt.Services = {
 				Bxt.Services.notifyComplete(requester);
 			}
 			
+			req.init();
 			req.data = requester.serviceRequest.data;
 			req.send();
 		},
@@ -153,7 +156,8 @@ Bxt.Services = {
 					};
 					Bxt.Services.notifyComplete(requester);
 				}
-
+				
+				req.init();
 				Bxt.Controller.Uploads.addUpload(req,file);
 			}
 		},
