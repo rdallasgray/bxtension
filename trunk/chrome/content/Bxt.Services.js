@@ -78,7 +78,6 @@ Bxt.Services = {
 			
 			setHeaders: function() {
 				for (var i in req.headers) {
-					Bxt.console.logStringMessage("setting header "+i+": "+req.headers[i]);
 					req.xhr.setRequestHeader(i,req.headers[i]);
 				}
 			},

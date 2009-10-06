@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>bxtension@pausebuttonedit.com</em:id>
-    <em:version>1.0.3.9</em:version>
+    <em:version>1.0.4.0</em:version>
     <em:type>2</em:type>
 
     <!-- Firefox -->
