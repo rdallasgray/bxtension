@@ -13,7 +13,7 @@
                                 <em:minVersion>3.0</em:minVersion>
                                 <em:maxVersion>3.5.*</em:maxVersion>
                                 <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.4.0.xpi</em:updateLink>
-                                <em:updateHash>sha1:135e882e4db2ea0b154be5e2e61b53fa69ac2c16</em:updateHash>
+                                <em:updateHash>sha1:a2bfd1b8a18fb377e09057bb63cdc307da7a5d10</em:updateHash>
                             </rdf:Description>
                         </em:targetApplication>
                     </rdf:Description>
@@ -21,10 +21,10 @@
             </rdf:Seq>
         </em:updates>
         <em:signature>
-            MIGRMAsGCSqGSIb3DQEBDQOBgQBWjQDX03JtQacg9OsoIIxgv+NwSgEgl4tx4mTF
-            LaDQMDxO/rVCvHmvBQCnrN6bGDqnfEBmeM1MICgrQUMSO3i05OoZPv3QxjV3wUq0
-            o00hZ4qHdis9vo/AcQ88R6bo8/3QskBK6VLoz7XuNkxSbfncLWWHm19eEV74XxrF
-            Vsw6jg==
+            MIGRMAsGCSqGSIb3DQEBDQOBgQABftoMLAKMP8ohhozNUdPslqLatEMajvAg+fMq
+            PjLly9KIM++ux0CTkuG0Tryg3SzXGrEigdAKfRuZnfHO/L4QOZlOMQGoVv3KBPw6
+            JKTo1m1ar4YcuEz2yCq5gCg0SlfwxePZH30QxJRd3W0WNQbkVD7lGGHC6uwWXpMC
+            vm6k5w==
         </em:signature>
     </rdf:Description>
 </rdf:RDF>
