@@ -27,19 +27,21 @@ Bxt.Services = {
 	createRequest: function(options) {
 
 		var knock = function() {
+						
 			req.tries++;
-		
-			if (req.tries > 5) {
+
+			Bxt.console.logStringMessage(req.options.url+": firing knock x "+req.tries+": "+req.xhr.status);
+
+			if (req.tries > 10) {
 				req.xhr.removeEventListener("load", knock, false, true);
-				Bxt.console.logStringMessage(req.options.url+": tried five times, running callback");
+				Bxt.console.logStringMessage(req.options.url+": tried ten times, running callback");
+				Bxt.console.logStringMessage(req.options.url+":responseText "+req.xhr.responseText);
 				req.callback();
 				return;
 			}
 			if (req.xhr.status === 401) {
 				Bxt.console.logStringMessage(req.options.url+": 401");
 				req.xhr.removeEventListener("load", knock, false, true);
-				req.xhr.abort();
-				req.setup();
 				req.send();
 			}
 			else {
