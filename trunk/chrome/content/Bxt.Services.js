@@ -35,7 +35,7 @@ Bxt.Services = {
 			if (req.tries > 10) {
 				req.xhr.removeEventListener("load", knock, false, true);
 				Bxt.console.logStringMessage(req.options.url+": tried ten times, running callback");
-				Bxt.console.logStringMessage(req.options.url+":responseText "+req.xhr.responseText);
+				Bxt.console.logStringMessage(req.options.url+"::responseText: \n"+req.xhr.responseText);
 				req.callback();
 				return;
 			}
@@ -47,7 +47,7 @@ Bxt.Services = {
 			else {
 				Bxt.console.logStringMessage(req.options.url+": "+req.xhr.status+", running callback");
 				req.xhr.removeEventListener("load", knock, false, true);
-				Bxt.console.logStringMessage(req.xhr.responseText);
+				Bxt.console.logStringMessage(req.options.url+"::responseText: \n"+req.xhr.responseText);
 				req.callback();
 			}
 		}
@@ -101,7 +101,7 @@ Bxt.Services = {
 			send: function(data) {
 				var data = data || req.data;
 				req.setup();
-				req.xhr.open(req.options.method,req.options.url,true,req.options.username,req.options.password);
+				req.xhr.open(req.options.method,req.options.url,false,req.options.username,req.options.password);
 				req.setHeaders();
 				var sendFunc = req.binary ? "sendAsBinary" : "send";
 				req.xhr[sendFunc](data);
