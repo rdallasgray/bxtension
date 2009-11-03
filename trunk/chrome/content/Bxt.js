@@ -26,7 +26,15 @@ Bxt = {
 		document.addEventListener("ServiceRequest", function(e) { return Bxt.Services.handleRequest(e); }, false, true);
 	},
 	
-	console: Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService)
+	console: Components.classes['@mozilla.org/consoleservice;1'].getService(Components.interfaces.nsIConsoleService),
+	
+	mode: "debug",
+	
+	debug: function(str) {
+		if (Bxt.mode === "debug") {
+			Bxt.console.logStringMessage(str);
+		}
+	}
 
 };
 

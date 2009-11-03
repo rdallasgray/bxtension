@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 Bxt.Services = {
 
 	handleRequest: function(e) {
+		Bxt.mode = e.target.wrappedJSObject.serviceRequest.mode === "debug" ? "debug" : "production";
 		Bxt.Services.public[e.target.wrappedJSObject.serviceRequest.service](e.target.wrappedJSObject);
 	},
 
@@ -30,24 +31,24 @@ Bxt.Services = {
 						
 			req.tries++;
 
-			Bxt.console.logStringMessage(req.options.url+": firing knock x "+req.tries+": "+req.xhr.status);
+			Bxt.debug(req.options.url+": firing knock x "+req.tries+": "+req.xhr.status);
 
-			if (req.tries > 10) {
+			if (req.tries > 3) {
 				req.xhr.removeEventListener("load", knock, false, true);
-				Bxt.console.logStringMessage(req.options.url+": tried ten times, running callback");
-				Bxt.console.logStringMessage(req.options.url+"::responseText: \n"+req.xhr.responseText);
+				Bxt.debug(req.options.url+": tried 3 times, running callback");
+				Bxt.debug(req.options.url+"::responseText: \n"+req.xhr.responseText);
 				req.callback();
 				return;
 			}
 			if (req.xhr.status === 401) {
-				Bxt.console.logStringMessage(req.options.url+": 401");
+				Bxt.debug(req.options.url+": 401");
 				req.xhr.removeEventListener("load", knock, false, true);
 				req.send();
 			}
 			else {
-				Bxt.console.logStringMessage(req.options.url+": "+req.xhr.status+", running callback");
+				Bxt.debug(req.options.url+": "+req.xhr.status+", running callback");
 				req.xhr.removeEventListener("load", knock, false, true);
-				Bxt.console.logStringMessage(req.options.url+"::responseText: \n"+req.xhr.responseText);
+				Bxt.debug(req.options.url+"::responseText: \n"+req.xhr.responseText);
 				req.callback();
 			}
 		}
