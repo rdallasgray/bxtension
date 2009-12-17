@@ -105,7 +105,12 @@ Bxt.Services = {
 				req.xhr.open(req.options.method,req.options.url,false,req.options.username,req.options.password);
 				req.setHeaders();
 				var sendFunc = req.binary ? "sendAsBinary" : "send";
-				req.xhr[sendFunc](data);
+				try {
+					req.xhr[sendFunc](data);
+				}
+				catch(e) {
+					Bxt.debug(e.toString());
+				}
 			},
 			
 			reset: function() {
