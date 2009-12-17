@@ -53,23 +53,39 @@
 	<exec executable="svn" dir="${src_dir}" failonerror="true">
 		<arg value="commit"/>
 		<arg value="-m"/>
-		<arg value="Committed full src dir, build ${buildVersion}"/>
+		<arg value="--username"/>
+		<arg value="robot.johnston"/>
+		<arg value="--password"/>
+		<arg value="gB5CW8jJ9SA4"/>
+		<arg value="'Committed full src dir, build ${buildVersion}'"/>
 		<arg value="${src_dir}"/>
 	</exec>
 	<exec executable="svn" dir="${dist_dir}" failonerror="true">
 		<arg value="commit"/>
 		<arg value="-m"/>
-		<arg value="Committed revision ${buildVersion}: ${outputXPIName}, update.rdf"/>
+		<arg value="'Committed revision ${buildVersion}: ${outputXPIName}, update.rdf'"/>
+		<arg value="--username"/>
+		<arg value="robot.johnston"/>
+		<arg value="--password"/>
+		<arg value="gB5CW8jJ9SA4"/>
 	</exec>
 	<exec executable="svn" dir="${dist_dir}" failonerror="true">
 		<arg value="commit"/>
 		<arg value="-m"/>
-		<arg value="Committed revision ${buildVersion}: ${outputXPIName}, update.rdf"/>
+		<arg value="'Committed revision ${buildVersion}: ${outputXPIName}, update.rdf'"/>
+		<arg value="--username"/>
+		<arg value="robot.johnston"/>
+		<arg value="--password"/>
+		<arg value="gB5CW8jJ9SA4"/>
 	</exec>
 	<exec executable="svn" dir="${dist_dir}/current" failonerror="true">
 		<arg value="commit"/>
 		<arg value="-m"/>
-		<arg value="Committed current dist, revision ${buildVersion}"/>
+		<arg value="'Committed current dist, revision ${buildVersion}'"/>
+		<arg value="--username"/>
+		<arg value="robot.johnston"/>
+		<arg value="--password"/>
+		<arg value="gB5CW8jJ9SA4"/>
 	</exec>
 	<echo>Done</echo>
 </target>
