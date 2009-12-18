@@ -33,7 +33,7 @@ Bxt.Services = {
 
 			Bxt.debug(req.options.url+": firing knock x "+req.tries+": "+req.xhr.status);
 
-			if (req.tries > 3) {
+			if (req.tries > 5) {
 				req.xhr.removeEventListener("load", knock, false, true);
 				Bxt.debug(req.options.url+": tried 3 times, running callback");
 				Bxt.debug(req.options.url+"::responseText: \n"+req.xhr.responseText);
@@ -105,12 +105,7 @@ Bxt.Services = {
 				req.xhr.open(req.options.method,req.options.url,false,req.options.username,req.options.password);
 				req.setHeaders();
 				var sendFunc = req.binary ? "sendAsBinary" : "send";
-				try {
-					req.xhr[sendFunc](data);
-				}
-				catch(e) {
-					Bxt.debug(e.toString());
-				}
+				req.xhr[sendFunc](data);
 			},
 			
 			reset: function() {
