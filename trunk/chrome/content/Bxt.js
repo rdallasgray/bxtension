@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 
 Bxt = {
 	
-	version: "1.0.4.7",
+	version: "1.0.4.8",
 	
 	boot: function() {
 		window.addEventListener("DOMContentLoaded",function(e) {
@@ -32,8 +32,12 @@ Bxt = {
 	
 	debug: function(str) {
 		if (Bxt.mode === "debug") {
-			Bxt.console.logStringMessage(str);
+			Bxt.log(str);
 		}
+	},
+	
+	log: function(str) {
+		Bxt.console.logStringMessage(str);
 	}
 
 };

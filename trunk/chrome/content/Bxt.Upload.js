@@ -74,6 +74,7 @@ Bxt.Upload.prototype = {
 	
 	reportProgress: function(loaded) {
 		this.loaded = loaded;
+		Bxt.log(loaded);
 		var options = { uploadId: this.id, loaded: loaded };
 		Bxt.Controller.Uploads.sendWindowEvent("UploadProgress",options);
 	},
