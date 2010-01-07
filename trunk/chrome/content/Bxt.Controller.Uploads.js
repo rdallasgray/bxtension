@@ -55,15 +55,15 @@ Bxt.Controller.Uploads = {
 	},
 	
 	addUpload: function(req,file) {
-
-		var u = new Bxt.Upload(req,file);
-		Bxt.Controller.Uploads.processQueue();
 		
 		if (Bxt.Controller.Uploads.window === undefined || Bxt.Controller.Uploads.window.closed) {
 			Bxt.Controller.Uploads.showWindow(function() {
 				Bxt.Controller.Uploads.window.document.getElementById("bxt-upload-box").boot(Bxt.Controller.Uploads);
 			});
 		}
+		
+		var u = new Bxt.Upload(req,file);
+		Bxt.Controller.Uploads.processQueue();
 	},
 	
 	showWindow: function(callback) {
