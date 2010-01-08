@@ -53,7 +53,7 @@ Bxt.Upload.prototype = {
 					catch(e) {}
 				});
 				
-				self.req.send(self.data);
+				self.req.send(self.data,true);
 			}
 		}
 	},
@@ -74,7 +74,7 @@ Bxt.Upload.prototype = {
 	
 	reportProgress: function(loaded) {
 		this.loaded = loaded;
-		Bxt.log(loaded);
+		Bxt.debug(loaded);
 		var options = { uploadId: this.id, loaded: loaded };
 		Bxt.Controller.Uploads.sendWindowEvent("UploadProgress",options);
 	},

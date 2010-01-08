@@ -88,7 +88,7 @@ Bxt.Services = {
 			setHandlers: function() {
 				req.handlers.forEach(function(h) {
 					var obj = h.upload ? req.xhr.upload : req.xhr;
-					obj.addEventListener(h.event,h.callback,false,true)
+					obj.addEventListener(h.event,h.callback,false,true);
 				});
 			},
 			
@@ -99,10 +99,12 @@ Bxt.Services = {
 				req.setHandlers();
 			},
 			
-			send: function(data) {
-				var data = data || req.data;
+			send: function(data,async) {
+				var data = data || req.data,
+					async = async || false;
+					
 				req.setup();
-				req.xhr.open(req.options.method,req.options.url,false,req.options.username,req.options.password);
+				req.xhr.open(req.options.method,req.options.url,async,req.options.username,req.options.password);
 				req.setHeaders();
 				var sendFunc = req.binary ? "sendAsBinary" : "send";
 				req.xhr[sendFunc](data);
