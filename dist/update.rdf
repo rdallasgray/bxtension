@@ -6,14 +6,14 @@
             <rdf:Seq>
                 <rdf:li>
                     <rdf:Description>
-                        <em:version>1.0.4.9</em:version>
+                        <em:version>1.0.5.0</em:version>
                         <em:targetApplication>
                             <rdf:Description>
                                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
                                 <em:minVersion>3.0</em:minVersion>
                                 <em:maxVersion>3.5.*</em:maxVersion>
-                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.4.9.xpi</em:updateLink>
-                                <em:updateHash>sha1:1d84fa0c9cdd98a77e903a12d6154d34cfc46bff</em:updateHash>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.0.xpi</em:updateLink>
+                                <em:updateHash>sha1:1d3e117eaa6ae72f21dae5c04be7dfcd76988d64</em:updateHash>
                             </rdf:Description>
                         </em:targetApplication>
                     </rdf:Description>
@@ -21,10 +21,10 @@
             </rdf:Seq>
         </em:updates>
         <em:signature>
-            MIGRMAsGCSqGSIb3DQEBDQOBgQBFL1ZtmEVtqF4/WlIIXLymKHjq4O2PncjWm+o4
-            HucdipAkjxfDilJsgCt5z8b4xAESVaIyKu2yrt28bmYFGj+WbmthsIlt6xtIStgl
-            AzCCVx2n+kgiQMEpQ6nUFjWF6EU/UWWoe6sQxer7GI6kX60KUn48i90pqXHS+Imy
-            bT03Zg==
+            MIGRMAsGCSqGSIb3DQEBDQOBgQADuXJ7GliPeQxbkXKmomcqWfc79lskE04SyIQz
+            J5YUbqg5v+alO7DoFajrpr5EzQ8ofOljAeP0uKoxTBHRWt222EL7h0h0SSogsye7
+            hmdH+9Nfc5HUEezUDb+O1Nwvaub41inVbQWh9a6YwaDWD43su6Saxh22b6i1z3BR
+            3eCXzg==
         </em:signature>
     </rdf:Description>
 </rdf:RDF>
