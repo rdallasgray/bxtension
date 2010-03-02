@@ -148,11 +148,8 @@ Bxt.Services = {
 			
 			var file;
 			
-			if (requester.file === null) {
+			if (!(file = requester.file)) {
 				file = Bxt.Controller.Files.pick(requester.serviceRequest.options.contentType);
-			}
-			else {
-				file = requester.file;
 			}
 
 			if (file !== false) {
