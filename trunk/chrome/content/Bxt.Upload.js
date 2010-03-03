@@ -58,6 +58,17 @@ Bxt.Upload.prototype = {
 		}
 	},
 	
+	getFileName: function() {
+		if (this.file.leafName !== undefined) {
+			return this.file.leafName;
+		}
+		return this.file.fileName;
+	},
+	
+	getFileSize: function() {
+		return this.file.fileSize;
+	},
+	
 	setState: function(state) {
 		this.state = state;
 		var options = { uploadId: this.id, state: state };
@@ -107,20 +118,21 @@ Bxt.Upload.prototype = {
 		var boundary = "boundary"+this.id,
 		 	prefix = 
 			"--"+boundary+"\r\n"
-		+	"Content-Disposition: form-data; name=\"file_data\"; filename=\""+this.file.leafName+"\"\r\n"
+		+	"Content-Disposition: form-data; name=\"file_data\"; filename=\""+this.getFileName()+"\"\r\n"
 		+	"Content-Type: "+this.req.options.contentType+";"+"\r\n\r\n";
-
-		var istream = Components.classes["@mozilla.org/network/file-input-stream;1"].
-							createInstance(Components.interfaces.nsIFileInputStream);
-
-		istream.init(this.file, -1, -1, false);
-
-		var bstream = Components.classes["@mozilla.org/binaryinputstream;1"].
-		                    createInstance(Components.interfaces.nsIBinaryInputStream);
-
-		bstream.setInputStream(istream);
-
-		var bytes = bstream.readBytes(bstream.available());
+		
+		if (this.file.getAsBinary !== undefined) {
+			var bytes = this.file.getAsBinary();
+		}
+		else {
+			var istream = Components.classes["@mozilla.org/network/file-input-stream;1"].
+								createInstance(Components.interfaces.nsIFileInputStream);
+			istream.init(this.file, -1, -1, false);
+			var bstream = Components.classes["@mozilla.org/binaryinputstream;1"].
+			                    createInstance(Components.interfaces.nsIBinaryInputStream);
+			bstream.setInputStream(istream);
+			var bytes = bstream.readBytes(bstream.available());
+		}
 
 		var data = prefix+bytes+"\r\n--"+boundary+"--";
 	

@@ -145,11 +145,12 @@ Bxt.Services = {
 		},
 
 		fileUpload: function(requester) {
-			
-			var file;
-			
-			if (!(file = requester.file)) {
-				file = Bxt.Controller.Files.pick(requester.serviceRequest.options.contentType);
+
+			if (requester.serviceRequest.options.file instanceof File) {
+				var file = requester.serviceRequest.options.file;
+			}
+			else {
+				var file = Bxt.Controller.Files.pick(requester.serviceRequest.options.contentType);
 			}
 
 			if (file !== false) {

@@ -247,8 +247,8 @@ You should have received a copy of the GNU General Public License along with Bxt
 						this.id = upload.id;
 						this.state = upload.state;
 						
-						this.fileName = this.upload.file.leafName;
-						this.fileSize = this.upload.file.fileSize;
+						this.fileName = this.upload.getFileName();
+						this.fileSize = this.upload.getFileSize();
 						this.fileSizeString = this.generateFileSizeString(this.fileSize);
 						
 						this.fileNameLabel.setAttribute("value",this.fileName+" to "+this.upload.req.options.url);
