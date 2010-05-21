@@ -21,14 +21,15 @@ Bxt.Controller.Files = {
 			var type = mimeType.split("/")[0],
 			extension = mimeType.split("/")[1],
 			types = {
-				image: "Image files"
+				image: "Image files",
+				audio: "Audio files"
 			},
 			extensions = {
-				jpeg: ["jpeg","jpg"],
-				mp3: ["mp3"]
+				"image/jpeg": ["jpeg","jpg"],
+				"audio/mpeg": ["mp3"]
 			};
 
-			var filter = [types[type], extensions[extension].map(function(el) "*."+el).join("; ")];
+			var filter = [types[type], extensions[mimeType].map(function(el) "*."+el).join("; ")];
 
 			return filter;
 		}
