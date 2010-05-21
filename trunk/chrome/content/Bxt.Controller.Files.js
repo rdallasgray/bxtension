@@ -24,7 +24,8 @@ Bxt.Controller.Files = {
 				image: "Image files"
 			},
 			extensions = {
-				jpeg: ["jpeg","jpg"]
+				jpeg: ["jpeg","jpg"],
+				mp3: ["mp3"]
 			};
 
 			var filter = [types[type], extensions[extension].map(function(el) "*."+el).join("; ")];
