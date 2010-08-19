@@ -6,14 +6,23 @@
             <rdf:Seq>
                 <rdf:li>
                     <rdf:Description>
-                        <em:version>1.0.5.8</em:version>
+                        <em:version>1.0.5.9</em:version>
                         <em:targetApplication>
                             <rdf:Description>
                                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
                                 <em:minVersion>3.6</em:minVersion>
                                 <em:maxVersion>4.0b3</em:maxVersion>
-                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.8.xpi</em:updateLink>
-                                <em:updateHash>sha1:0df10fa76184c63851e0b598cf5bcf644f17a78d</em:updateHash>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.9.xpi</em:updateLink>
+                                <em:updateHash>sha1:344ce904137cfd14cec0e04329f7659db262080a</em:updateHash>
+                            </rdf:Description>
+                        </em:targetApplication>
+                        <em:targetApplication>
+                            <rdf:Description>
+                                <em:id>prism@developer.mozilla.org</em:id>
+                                <em:minVersion>1.0b3</em:minVersion>
+                                <em:maxVersion>1.0b3</em:maxVersion>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.9.xpi</em:updateLink>
+                                <em:updateHash>sha1:344ce904137cfd14cec0e04329f7659db262080a</em:updateHash>
                             </rdf:Description>
                         </em:targetApplication>
                     </rdf:Description>
@@ -21,10 +30,10 @@
             </rdf:Seq>
         </em:updates>
         <em:signature>
-            MIGRMAsGCSqGSIb3DQEBDQOBgQCOyI+jTjc7yDcNKyakjBsl+X8x4NrjNtUGBIJx
-            aZ6pTbh6foej0beDaxA31qu4hRFhZwoxAbp05aIdMj8Lt4+0UqasKU1HvWugUjRk
-            qAir1NepjmxiXC/vJymwCWC9ccdsMEtEfomojJ8xEgJQh7Eg+q0zP1bb0keriFl+
-            2LZ+AQ==
+            MIGRMAsGCSqGSIb3DQEBDQOBgQAi2R+Dh652p4ggEYN/Eu4tdC/VmFXssdk69Ziu
+            IswcikzX0ujoyLkIVWY2M8+VqQWhg2tEYC0Fg8AHquABw06mVdPB+p3iN0XImzvd
+            1gYPYXIYpp47W8j12oPkSLF6IPe3AAF4GMPcQ+XDQ2oS9a533PBmQKUJ8ZZAXsRA
+            fl0yQQ==
         </em:signature>
     </rdf:Description>
 </rdf:RDF>
