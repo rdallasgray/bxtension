@@ -6,14 +6,14 @@
             <rdf:Seq>
                 <rdf:li>
                     <rdf:Description>
-                        <em:version>1.0.5.7</em:version>
+                        <em:version>1.0.5.8</em:version>
                         <em:targetApplication>
                             <rdf:Description>
                                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
                                 <em:minVersion>3.6</em:minVersion>
-                                <em:maxVersion>4.0.*</em:maxVersion>
-                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.7.xpi</em:updateLink>
-                                <em:updateHash>sha1:f7373ca8071cec6362234674e44f92e2713d255f</em:updateHash>
+                                <em:maxVersion>4.0b3</em:maxVersion>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.8.xpi</em:updateLink>
+                                <em:updateHash>sha1:0df10fa76184c63851e0b598cf5bcf644f17a78d</em:updateHash>
                             </rdf:Description>
                         </em:targetApplication>
                     </rdf:Description>
@@ -21,10 +21,10 @@
             </rdf:Seq>
         </em:updates>
         <em:signature>
-            MIGRMAsGCSqGSIb3DQEBDQOBgQB+3S+BVDMCkpirBvlnHAP9XNF61h/Zf/Pr9if5
-            bKAKT89NJgkOE0cbEPo0CrX2/jpy8A2sP9PG5vUWSb0kOG/A2pvB+cB11YZfN8Jn
-            vCPHYPDmSpSbKl5k3Dugq60k9Y7QmU7Y+UB6Q9wSpNVKacWQmepuU24Fi2NKse1U
-            Ioecxw==
+            MIGRMAsGCSqGSIb3DQEBDQOBgQCOyI+jTjc7yDcNKyakjBsl+X8x4NrjNtUGBIJx
+            aZ6pTbh6foej0beDaxA31qu4hRFhZwoxAbp05aIdMj8Lt4+0UqasKU1HvWugUjRk
+            qAir1NepjmxiXC/vJymwCWC9ccdsMEtEfomojJ8xEgJQh7Eg+q0zP1bb0keriFl+
+            2LZ+AQ==
         </em:signature>
     </rdf:Description>
 </rdf:RDF>
