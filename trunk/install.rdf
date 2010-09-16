@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>bxtension@pausebuttonedit.com</em:id>
-    <em:version>1.0.6.0</em:version>
+    <em:version>1.0.6.1</em:version>
     <em:type>2</em:type>
 
     <!-- Firefox -->
@@ -28,7 +28,7 @@
 
     <em:name>Bxtension</em:name>
     <em:description>A small extension that helps Boxes do its work.</em:description>
-    <em:creator>Robert Johnston</em:creator>
+    <em:creator>Robert Dallas Gray</em:creator>
     <em:homepageURL>http://bxtension.googlecode.com/</em:homepageURL>
     <em:updateURL>http://bxtension.googlecode.com/svn/dist/update.rdf</em:updateURL>
     <em:updateKey>
