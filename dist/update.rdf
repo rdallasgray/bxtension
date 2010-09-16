@@ -6,14 +6,14 @@
             <rdf:Seq>
                 <rdf:li>
                     <rdf:Description>
-                        <em:version>1.0.5.9</em:version>
+                        <em:version>1.0.6.0</em:version>
                         <em:targetApplication>
                             <rdf:Description>
                                 <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
                                 <em:minVersion>3.6</em:minVersion>
-                                <em:maxVersion>4.0b3</em:maxVersion>
-                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.9.xpi</em:updateLink>
-                                <em:updateHash>sha1:344ce904137cfd14cec0e04329f7659db262080a</em:updateHash>
+                                <em:maxVersion>4.0b6</em:maxVersion>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.6.0.xpi</em:updateLink>
+                                <em:updateHash>sha1:8f3732c30fec05b7028d604905885d791d7c3e8c</em:updateHash>
                             </rdf:Description>
                         </em:targetApplication>
                         <em:targetApplication>
@@ -21,8 +21,8 @@
                                 <em:id>prism@developer.mozilla.org</em:id>
                                 <em:minVersion>1.0b3</em:minVersion>
                                 <em:maxVersion>1.0b3</em:maxVersion>
-                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.5.9.xpi</em:updateLink>
-                                <em:updateHash>sha1:344ce904137cfd14cec0e04329f7659db262080a</em:updateHash>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.6.0.xpi</em:updateLink>
+                                <em:updateHash>sha1:8f3732c30fec05b7028d604905885d791d7c3e8c</em:updateHash>
                             </rdf:Description>
                         </em:targetApplication>
                     </rdf:Description>
@@ -30,10 +30,10 @@
             </rdf:Seq>
         </em:updates>
         <em:signature>
-            MIGRMAsGCSqGSIb3DQEBDQOBgQAi2R+Dh652p4ggEYN/Eu4tdC/VmFXssdk69Ziu
-            IswcikzX0ujoyLkIVWY2M8+VqQWhg2tEYC0Fg8AHquABw06mVdPB+p3iN0XImzvd
-            1gYPYXIYpp47W8j12oPkSLF6IPe3AAF4GMPcQ+XDQ2oS9a533PBmQKUJ8ZZAXsRA
-            fl0yQQ==
+            MIGRMAsGCSqGSIb3DQEBDQOBgQCYWN90kjMKLIoKPE5HekmVZuNWxlQO0Z84Mb3R
+            N0UQvu7QQERLFmfJYqee5TBI2FODdWlQQEMC1GFhASAfO+zMQvlKEgIaU/SNJkTu
+            8c2jLjN6LFwhhJWdo3Ysol7glw/yVcxzECeCDBNTITeNTmOgQHd+fKN4WijywP95
+            zkV6vA==
         </em:signature>
     </rdf:Description>
 </rdf:RDF>
