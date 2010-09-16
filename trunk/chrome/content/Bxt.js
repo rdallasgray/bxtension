@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 
 Bxt = {
 	
-	version: "1.0.5.9",
+	version: "1.0.6.0",
 	
 	boot: function() {
 		window.addEventListener("DOMContentLoaded",function(e) {
