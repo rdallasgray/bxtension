@@ -25,8 +25,9 @@ Bxt.Controller.Files = {
 				audio: "Audio files"
 			},
 			extensions = {
-				"image/jpeg": ["jpeg","jpg"],
-				"audio/mpeg": ["mp3"]
+				"image/jpeg": 		["jpeg","jpg"],
+				"application/pdf": 	["pdf"],
+				"audio/mpeg": 		["mp3"]
 			};
 
 			var filter = [types[type], extensions[mimeType].map(function(el) "*."+el).join("; ")];
