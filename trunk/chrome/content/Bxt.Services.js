@@ -128,8 +128,6 @@ Bxt.Services = {
 
 			var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 
-			req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
-
 			req.callback = 	function() {
 				requester.response = { 
 					text: req.xhr.responseText,
