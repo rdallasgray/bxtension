@@ -118,6 +118,7 @@ Bxt.Services = {
 			tries: 0
 		}
 		
+		req.xhr.withCredentials = true;
 		req.xhr.mozBackgroundRequest = true;
 
 		return req;
