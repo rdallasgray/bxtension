@@ -85,7 +85,6 @@ You should have received a copy of the GNU General Public License along with Bxt
 					<parameter name="e"/>
 					<body>
 						<![CDATA[
-                     window.alert(e.detail.toSource());
 							var view = document.getElementById(e.uploadId);
 							if (view === null) {
 								view = this.createView(this.controller.getUploadById(e.uploadId));
