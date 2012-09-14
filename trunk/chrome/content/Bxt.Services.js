@@ -155,7 +155,7 @@ Bxt.Services = {
 			      }
 
 			      if (file !== false) {
-                file = XPCNativeWrapper.unwrap(obj);
+                file = XPCNativeWrapper.unwrap(file);
                 console.log(file)
 				        var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 				        req.binary = true;
