@@ -68,7 +68,7 @@ Bxt.Services = {
 						req.addHeader(h,options.headers[h]);
 					}
 				}
-			    req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
+			//    req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
 			},
 			
 			addHeader: function(name,value) {
@@ -153,7 +153,7 @@ Bxt.Services = {
 			}
 
 			if (file !== false) {
-
+          console.log(file);
 				var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 				req.binary = true;
 
