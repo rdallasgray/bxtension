@@ -56,7 +56,7 @@ Bxt.Services = {
 		    var req = {
 			      
 			      options: options,
-			      data: null,
+			      data: "",
 			      binary: false,
 			      callback: function() { return true; },
 			      headers: {},
@@ -146,14 +146,12 @@ Bxt.Services = {
 		    },
 
 		    fileUpload: function(requester) {
-
 			      if (requester.serviceRequest.options.file instanceof File) {
 				        var file = requester.serviceRequest.options.file;
 			      }
 			      else {
 				        var file = Bxt.Controller.Files.pick(requester.serviceRequest.options.contentType);
 			      }
-
 			      if (file !== false) {
 				        var req = Bxt.Services.createRequest(requester.serviceRequest.options);
 				        req.binary = true;

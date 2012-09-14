@@ -28,9 +28,9 @@ You should have received a copy of the GNU General Public License along with Bxt
 					
 						var self = this;
 						
-						window.addEventListener("UploadStateChange",function(e) { self.updateView(e); },false,true);
-						window.addEventListener("UploadProgress",function(e) { self.updateProgress(e); },false,true);
-						window.addEventListener("UploadRemoved",function(e) { self.removeView(e); },false,true);
+						window.addEventListener("UploadStateChange",function(e) { self.updateView(e.detail); },false,true);
+						window.addEventListener("UploadProgress",function(e) { self.updateProgress(e.detail); },false,true);
+						window.addEventListener("UploadRemoved",function(e) { self.removeView(e.detail); },false,true);
 					]]>
 				</constructor>
 				
@@ -85,7 +85,7 @@ You should have received a copy of the GNU General Public License along with Bxt
 					<parameter name="e"/>
 					<body>
 						<![CDATA[
-					
+                     window.alert(e.detail.toSource());
 							var view = document.getElementById(e.uploadId);
 							if (view === null) {
 								view = this.createView(this.controller.getUploadById(e.uploadId));

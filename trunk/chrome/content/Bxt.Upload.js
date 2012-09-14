@@ -52,7 +52,7 @@ Bxt.Upload.prototype = {
 		                }
 		                catch(e) {}
 		            });
-		            
+		            Bxt.log("Doing real send");
 		            self.req.send(self.data,true);
 	          }
 	      }
@@ -76,6 +76,7 @@ Bxt.Upload.prototype = {
     },
     
     setState: function(state) {
+        Bxt.log("State changed to " + state);
 	      this.state = state;
 	      var options = { uploadId: this.id, state: state };
 	      Bxt.Controller.Uploads.sendWindowEvent("UploadStateChange",options);
@@ -146,7 +147,6 @@ Bxt.Upload.prototype = {
 	      }
 
 	      var data = prefix+bytes+"\r\n--"+boundary+"--";
-	      Bxt.log(data);
 	      return data;
     }
     
