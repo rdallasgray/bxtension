@@ -31,123 +31,123 @@ Bxt.Upload.prototype = {
 
     prepare: function() {
 
-	var callback = this.req.callback,
-	self = this;
+	      var callback = this.req.callback,
+	      self = this;
 
-	this.req.callback = function() {
-	    if (self.req.xhr.status === 204) {
-		self.req.reset();
-		self.req.callback = callback;
-		self.req.addHandler("progress",function(e) {
-		    self.reportProgress(e.loaded);
-		},true);
-		self.req.addHandler("load",function() {
-		    try {
-			if (self.req.xhr.status === 201) {
-			    self.success();
-			}
-			else {
-			    self.fail();
-			}
-		    }
-		    catch(e) {}
-		});
-		
-		self.req.send(self.data,true);
-	    }
-	}
+	      this.req.callback = function() {
+	          if (self.req.xhr.status === 204) {
+		            self.req.reset();
+		            self.req.callback = callback;
+		            self.req.addHandler("progress",function(e) {
+		                self.reportProgress(e.loaded);
+		            },true);
+		            self.req.addHandler("load",function() {
+		                try {
+			                  if (self.req.xhr.status === 201) {
+			                      self.success();
+			                  }
+			                  else {
+			                      self.fail();
+			                  }
+		                }
+		                catch(e) {}
+		            });
+		            
+		            self.req.send(self.data,true);
+	          }
+	      }
     },
     
     getFileName: function() {
-	if (this.file.leafName !== undefined) {
-	    return this.file.leafName;
-	}
-	else if (this.file.name !== undefined) {
-	    return this.file.name;
-	}
-	return this.file.fileName;
+	      if (this.file.leafName !== undefined) {
+	          return this.file.leafName;
+	      }
+	      else if (this.file.name !== undefined) {
+	          return this.file.name;
+	      }
+	      return this.file.fileName;
     },
     
     getFileSize: function() {
-	if (this.file.size !== undefined) {
-	    return this.file.size;
-	}
-	return this.file.fileSize;
+	      if (this.file.size !== undefined) {
+	          return this.file.size;
+	      }
+	      return this.file.fileSize;
     },
     
     setState: function(state) {
-	this.state = state;
-	var options = { uploadId: this.id, state: state };
-	Bxt.Controller.Uploads.sendWindowEvent("UploadStateChange",options);
-	Bxt.Controller.Uploads.processQueue();
+	      this.state = state;
+	      var options = { uploadId: this.id, state: state };
+	      Bxt.Controller.Uploads.sendWindowEvent("UploadStateChange",options);
+	      Bxt.Controller.Uploads.processQueue();
     },
     
     start: function() {
-	this.prepare();
-	this.timeStarted = new Date().getTime();
-	this.setState("active");
-	this.req.send();
+	      this.prepare();
+	      this.timeStarted = new Date().getTime();
+	      this.setState("active");
+	      this.req.send();
     },
     
     reportProgress: function(loaded) {
-	this.loaded = loaded;
-	Bxt.debug(loaded);
-	var options = { uploadId: this.id, loaded: loaded };
-	Bxt.Controller.Uploads.sendWindowEvent("UploadProgress",options);
+	      this.loaded = loaded;
+	      Bxt.debug(loaded);
+	      var options = { uploadId: this.id, loaded: loaded };
+	      Bxt.Controller.Uploads.sendWindowEvent("UploadProgress",options);
     },
     
     cancel: function() {
-	this.req.xhr.abort();
-	this.setState("cancelled");
+	      this.req.xhr.abort();
+	      this.setState("cancelled");
     },
     
     retry: function() {
-	this.req.reset();
-	this.setState("queued");
+	      this.req.reset();
+	      this.setState("queued");
     },
     
     remove: function() {
-	var options = { uploadId: this.id };
-	Bxt.Controller.Uploads.sendWindowEvent("UploadRemoved",options);
-	delete(Bxt.Controller.Uploads.uploadList[this.id]);
+	      var options = { uploadId: this.id };
+	      Bxt.Controller.Uploads.sendWindowEvent("UploadRemoved",options);
+	      delete(Bxt.Controller.Uploads.uploadList[this.id]);
     },
     
     success: function() {
-	this.setState("succeeded");
+	      this.setState("succeeded");
     },
     
     fail: function() {
-	this.setState("failed");
+	      this.setState("failed");
     },
     
     createStream: function() {
-	var boundary = "boundary"+this.id,
-	prefix = 
-	    "--"+boundary+"\r\n"
-	    +	"Content-Disposition: form-data; name=\"file_data\"; filename=\""+this.getFileName()+"\"\r\n"
-	    +	"Content-Type: "+this.req.options.contentType+";"+"\r\n\r\n";
-	
-	if (this.file.getAsBinary !== undefined) {
-	    var bytes = this.file.getAsBinary();
-	}
-	else {
-	    var istream = Components.classes["@mozilla.org/network/file-input-stream;1"].
-		createInstance(Components.interfaces.nsIFileInputStream),
-	        file = this.file;
-	    if (this.file.mozFullPath !== undefined) {
-		file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
-		file.initWithPath(this.file.mozFullPath);
-	    }
-	    istream.init(file, -1, -1, false);
-	    var bstream = Components.classes["@mozilla.org/binaryinputstream;1"].
-		createInstance(Components.interfaces.nsIBinaryInputStream);
-	    bstream.setInputStream(istream);
-	    var bytes = bstream.readBytes(bstream.available());
-	}
+	      var boundary = "boundary"+this.id,
+	      prefix = 
+	          "--"+boundary+"\r\n"
+	          +	"Content-Disposition: form-data; name=\"file_data\"; filename=\""+this.getFileName()+"\"\r\n"
+	          +	"Content-Type: "+this.req.options.contentType+";"+"\r\n\r\n";
+	      
+	      if (this.file.getAsBinary !== undefined) {
+	          var bytes = this.file.getAsBinary();
+	      }
+	      else {
+	          var istream = Components.classes["@mozilla.org/network/file-input-stream;1"].
+		            createInstance(Components.interfaces.nsIFileInputStream),
+	          file = this.file;
+	          if (this.file.mozFullPath !== undefined) {
+		            file = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+		            file.initWithPath(this.file.mozFullPath);
+	          }
+	          istream.init(file, -1, -1, false);
+	          var bstream = Components.classes["@mozilla.org/binaryinputstream;1"].
+		            createInstance(Components.interfaces.nsIBinaryInputStream);
+	          bstream.setInputStream(istream);
+	          var bytes = bstream.readBytes(bstream.available());
+	      }
 
-	var data = prefix+bytes+"\r\n--"+boundary+"--";
-	
-	return data;
+	      var data = prefix+bytes+"\r\n--"+boundary+"--";
+	      Bxt.log(data);
+	      return data;
     }
     
 
