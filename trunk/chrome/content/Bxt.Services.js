@@ -68,7 +68,6 @@ Bxt.Services = {
 						            req.addHeader(h,options.headers[h]);
 					          }
 				        }
-			          //    req.addHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
 			      },
 			      
 			      addHeader: function(name,value) {
