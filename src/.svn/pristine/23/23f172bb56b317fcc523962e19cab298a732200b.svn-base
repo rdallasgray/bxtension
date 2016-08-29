@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>bxtension@pausebuttonedit.com</em:id>
+    <em:version>1.0.8.4</em:version>
+    <em:type>2</em:type>
+
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.6</em:minVersion>
+        <em:maxVersion>16.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <em:name>Bxtension</em:name>
+    <em:description>A small extension that helps Boxes do its work.</em:description>
+    <em:creator>Robert Dallas Gray</em:creator>
+    <em:homepageURL>http://bxtension.googlecode.com/</em:homepageURL>
+    <em:updateURL>http://bxtension.googlecode.com/svn/dist/update.rdf</em:updateURL>
+    <em:updateKey>
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCo1gi42L2Clq7kdSazovfeKQjr
+wAwAg4pmv0wEH758VZ/kOXvrA2amtBWsBHY3J4sKGwJ1pOWHXclmVy/DM/JPnKsr
+P9iY6ukdKRR5d4EcMU6esNmv6AYJ4nNCMp9OKTNQwPzmWPLpS4djC0QOBlmX/Qqf
+tw8/t6Kv7v6pt/+JEwIDAQAB
+	</em:updateKey>
+
+  </Description>
+</RDF>

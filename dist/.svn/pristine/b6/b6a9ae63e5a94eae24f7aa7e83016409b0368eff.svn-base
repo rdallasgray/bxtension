@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <rdf:Description rdf:about="urn:mozilla:extension:bxtension@pausebuttonedit.com">
+        <em:updates>
+            <rdf:Seq>
+                <rdf:li>
+                    <rdf:Description>
+                        <em:version>1.0.8.7</em:version>
+                        <em:targetApplication>
+                            <rdf:Description>
+                                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                                <em:minVersion>3.6</em:minVersion>
+                                <em:maxVersion>16.*</em:maxVersion>
+                                <em:updateLink>http://bxtension.googlecode.com/svn/dist/bxtension-1.0.8.7.xpi</em:updateLink>
+                                <em:updateHash>sha1:1ca06434c2e33fd548fc2aa8d153b2be0fb44b6a</em:updateHash>
+                            </rdf:Description>
+                        </em:targetApplication>
+                    </rdf:Description>
+                </rdf:li>
+            </rdf:Seq>
+        </em:updates>
+        <em:signature>
+            MIGRMAsGCSqGSIb3DQEBDQOBgQB2y8bKduJYHmlGUqsY5Kr5oMnn4Zene8jWdMbf
+            fsYF+HmZGTNmuZHl+InS+NhKOpJ3yISQXl/pZ9H435GN0cKymzcQ4bairBXdSCIg
+            wlxPMa4Srw4oZCbC8oTkhLoYWJufOQzbOFnePQ3pRsJLhkMuvu69TmjOMDnZPm9H
+            Jnl+Ww==
+        </em:signature>
+    </rdf:Description>
+</rdf:RDF>

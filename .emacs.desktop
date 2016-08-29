@@ -1,0 +1,238 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Sep 14 17:12:10 2012
+;; Desktop file format version 206
+;; Emacs version 24.2.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name "/Users/robertdallasgray/.emacs.d/elpa/multi-project-0.0.8/TAGS")
+(setq tags-table-list '("/Users/robertdallasgray/.emacs.d/elpa/multi-project-0.0.8/TAGS"))
+(setq search-ring '("aler"))
+(setq regexp-search-ring nil)
+(setq register-alist '((48 . "detail")))
+(setq file-name-history '("/Users/robertdallasgray/Sites/www.themoderninstitute.com/application/modules/default/views/scripts/projects/images.phtml" "/Users/robertdallasgray/Sites/www.themoderninstitute.com/library/Bbx/Controller/Rest/Crud.php" "/Users/robertdallasgray/Documents/Code/project-persist/project-persist.el" "/Users/robertdallasgray/.emacs.d/elpa/sr-speedbar-20090723.435/sr-speedbar.el" "/Users/robertdallasgray/Documents/Code/project-persist/project-persist.el" "/Users/robertdallasgray/.emacs.d/elpa/powerline-20120906.1535/powerline.el" "/Users/robertdallasgray/.emacs.d/init.el" "/Users/robertdallasgray/Documents/Code/project-persist/project-persist.el" "/Users/robertdallasgray/.emacs.d/elpa/projectile-20120612.1957/projectile.el" "/Users/robertdallasgray/.emacs.d/elpa/project-mode-1.0/project-mode.el" "/Users/robertdallasgray/.emacs.d/init.el" "/Users/robertdallasgray/Downloads/eproject-0.4/eproject-config.el" "/Users/robertdallasgray/Documents/Code/graphene/graphene-env.el" "/Users/robertdallasgray/Documents/Code/graphene/README.md" "/Users/robertdallasgray/.emacs.d/init.el" "/Users/robertdallasgray/.bashrc"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/install.rdf"
+  "install.rdf"
+  'nxml-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode global-auto-revert-mode project-persist-mode)
+  1169
+  '(1168 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/bxt-view-uploads.xml"
+  "bxt-view-uploads.xml"
+  'nxml-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode global-auto-revert-mode project-persist-mode linum-mode)
+  3530
+  '(2553 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/Bxt.js"
+  "Bxt.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1397
+  '(1404 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/Bxt.Controller.Uploads.js"
+  "Bxt.Controller.Uploads.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1969
+  '(1962 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/Bxt.Upload.js"
+  "Bxt.Upload.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  3400
+  '(4871 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/bxt-window-uploads.xul"
+  "bxt-window-uploads.xul"
+  'nxml-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode global-auto-revert-mode project-persist-mode)
+  1181
+  '(1124 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/bxt-main.xul"
+  "bxt-main.xul"
+  'nxml-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode global-auto-revert-mode project-persist-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/skin/classic/bxt-uploads.css"
+  "bxt-uploads.css"
+  'css-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode global-auto-revert-mode project-persist-mode)
+  785
+  '(785 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/Bxt.Services.js"
+  "Bxt.Services.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  2340
+  '(2210 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Library/Application Support/Firefox/Profiles/vvlxu4wn.default-1346597500744/extensions/bxtension@pausebuttonedit.com"
+  "bxtension@pausebuttonedit.com<2>"
+  'dcl-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  54
+  '(50 nil)
+  nil
+  nil
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Library/Application Support/Firefox/Profiles/hs6do8bb.ext-test/extensions/bxtension@pausebuttonedit.com"
+  "bxtension@pausebuttonedit.com"
+  'dcl-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  31
+  '(35 t)
+  nil
+  nil
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/Bxt.Controller.Files.js"
+  "Bxt.Controller.Files.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1611
+  '(1534 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Documents/Code/bxtension/src/chrome/content/Bxt.Controller.js"
+  "Bxt.Controller.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/www/Bxs/app/js/Bxs.Parser.js"
+  "Bxs.Parser.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  751
+  '(1091 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/www/Bxs/app/js/Bxs.Controller.Collection.Media.js"
+  "Bxs.Controller.Collection.Media.js"
+  'js-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  2091
+  '(1123 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/library/Bbx/ActionHelper/Media.php"
+  "Media.php"
+  'php+-mode
+  '(abbrev-mode visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1508
+  '(1456 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/library/Bbx/Controller/Rest/Crud/Downloadable.php"
+  "Downloadable.php"
+  'php+-mode
+  '(abbrev-mode visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/application/modules/default/models/Image.php"
+  "Image.php"
+  'php+-mode
+  '(abbrev-mode visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/application/modules/default/controllers/ImagesController.php"
+  "ImagesController.php"
+  'php+-mode
+  '(abbrev-mode visual-line-mode global-visual-line-mode smart-tab-mode auto-complete-mode autopair-mode global-auto-revert-mode project-persist-mode flymake-mode linum-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/robertdallasgray/Sites/www.themoderninstitute.com/application/config/application.ini"
+  "application.ini"
+  'conf-windows-mode
+  '(visual-line-mode global-visual-line-mode smart-tab-mode global-auto-revert-mode project-persist-mode)
+  17795
+  '(18530 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
